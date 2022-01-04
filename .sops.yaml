@@ -1,0 +1,7 @@
+creation_rules:
+  - encrypted_regex: '^(data|stringData)$'
+    path_regex: ./environment-overlays/dev/.*
+    kms: 'arn:aws:kms:us-west-2:950698127059:key/739a21c8-6eaf-4bfe-a5dd-d5eac23d454d'
+  - encrypted_regex: '^(data|stringData)$'
+    path_regex: ./bigbang-base/.*
+    kms: 'arn:aws:kms:us-west-2:950698127059:key/739a21c8-6eaf-4bfe-a5dd-d5eac23d454d'
