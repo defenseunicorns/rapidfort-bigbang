@@ -1,0 +1,126 @@
+affinity: {}
+backend:
+  autoscaling:
+    enabled: false
+    maxReplicas: 10
+    minReplicas: 1
+    targetCPUUtilizationPercentage: 80
+  image:
+    pullPolicy: Always
+    repository: 099501741114.dkr.ecr.us-east-2.amazonaws.com/ve-backend
+    version: 832-pr-vep781
+  ingress:
+    admin:
+      annotations: {}
+      enabled: false
+      hosts:
+        host: chart-example.local
+        paths: /
+      tls:
+        enabled: false
+        secretName: null
+    api:
+      annotations: {}
+      enabled: false
+      hosts:
+        host: chart-example.local
+        paths: /
+      tls:
+        enabled: false
+        secretName: null
+  jobs:
+    migration:
+      enabled: true
+    seed:
+      enabled: false
+  replicas: 1
+  resources:
+    enabled: true
+    limits:
+      cpu: "1.5"
+      memory: 2000Mi
+    requests:
+      cpu: 800m
+      memory: 800Mi
+  service:
+    port: 3000
+    type: ClusterIP
+e2e:
+  enabled: true
+  image:
+    pullPolicy: Always
+    repository: 099501741114.dkr.ecr.us-east-2.amazonaws.com/ve-e2e-server
+    version: 5bdf923f4514a44bcf152235a029df3e65bacb52-dev
+  resources:
+    enabled: true
+    limits:
+      cpu: "2"
+      memory: 3Gi
+    requests:
+      cpu: "1"
+      memory: 2Gi
+  service:
+    port: 3002
+    type: ClusterIP
+  vnc:
+    enabled: true
+    password: testvnc
+environment: test
+frontend:
+  autoscaling:
+    enabled: false
+    maxReplicas: 10
+    minReplicas: 1
+    targetCPUUtilizationPercentage: 80
+  image:
+    pullPolicy: Always
+    repository: 099501741114.dkr.ecr.us-east-2.amazonaws.com/ve-client-e2e
+    version: 29136a0b761a4943f91ddd2a2d391995be5fc8c6-dev
+  ingress:
+    annotations: {}
+    enabled: false
+    hosts:
+      host: chart-example.local
+      paths: /
+    tls:
+      enabled: false
+      secretName: null
+  replicas: 1
+  resources:
+    enabled: true
+    limits:
+      cpu: "2"
+      memory: 4000Mi
+    requests:
+      cpu: 900m
+      memory: 2500Mi
+  service:
+    port: 80
+    type: ClusterIP
+imagePullSecrets: []
+nodeSelector: {}
+testMode: false
+tolerations: []
+validScoreCalcs:
+  autoscaling:
+    enabled: false
+    maxReplicas: 10
+    minReplicas: 1
+    targetCPUUtilizationPercentage: 80
+  image:
+    pullPolicy: Always
+    repository: 099501741114.dkr.ecr.us-east-2.amazonaws.com/valid-score-calcs
+    version: b55d170b58c69d5873a29fb3a19000be425eb200-dev
+  replicas: 1
+  resources:
+    enabled: true
+    limits:
+      cpu: "4"
+      memory: 4096Mi
+    requests:
+      cpu: "2"
+      memory: 2048Mi
+rubericHandler:
+  config:
+    envFile: "SOME_VAR=not_empty"
+    existingSecret: null
