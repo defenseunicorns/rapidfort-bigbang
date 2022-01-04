@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-    .dockerconfigjson: ENC[AES256_GCM,data:oranGUoksSlvaLPNVvasRRUuasu4p5TJbmb/pWhBSgvyd6fRzGEtQ1OayPP5ZJSOJr8H/olqyXDLpGRsvbZy2R9fDLEu6VO0B9laXmW3fcO7hN5lbYqmBRZagrC1z+8zBR5TUkbYaLT6uRJdWbPkwE3VHBrWGijHgPTghs10s1uq1xOXFWClDGJ6LyQT5Opl5gJKf4NvP2R5Wo2B5UjgIydt2ojlAIt1BVLM6YiTvhXLRIdpOgRqjN+ZURwQq7pkpJpEdA4nJimw13EdUEHO+eYiGrNtkLVg8aY8t+cWr5t7JqLI+EAzmky3bZUiY9cT5E2BgDp6iRBi4Uc+ILGexRyykTva/hMgi9GLBFE5ImdovGpSh0NbPPJz163DxEoTbW36BKfiA9ZbUho9oFCd+TMXdKjJ3IMU/rn6PQ==,iv:q7mbxxmc2QPXt7Dx212D01ab8CCiEJMu9uiU5ebGDsg=,tag:tIemjVyVSz8YPyz8TuikRA==,type:str]
+    .dockerconfigjson: ENC[AES256_GCM,data:nqGJw86fmvyCgdGCJ4avVx/mrw09T64OCqBH5D0o9bR7nl2U0hXMsMHGz9Mip5NZ6FOHATuT29Xz6PtELR/Qoka0AEwRlI/Gw8lcbHzQJDFhxx0p70q5XLSJPHh+yGnw3uViHyuc+DbNj4IGUMSu4cqb2UZ+9P/gtMKgJSoWw1NwDcEvaYX/uysnKFyDyGsd4kZV2O0RZ0FSlCD2XY69oiFbSWHIHb8ubJsKWWgiaoT6lzO5ryRtyLojUABVSut62fd/b3Zum27/KwbIwyJDAUeOeqA8JerGvKDfssPOYr1zr4sc30+Y/2icm/idcNsvtGuXptNSAqhusaqZ7gM4Vfim41rrcIKt4aTITmQbYZuUC9v2UlDXgRCSMMYA0z2j+tSfD5kSycggR7M0gu6fRZPrFkkNemcIfnUVXg==,iv:NrgEEdisJIKNzqjWzHEBcSyCEqeQIVBNg3vo/TYVfpM=,tag:0ZqQhJyUmApispsI/9Hv1Q==,type:str]
 kind: Secret
 metadata:
     creationTimestamp: null
@@ -8,16 +8,16 @@ metadata:
 type: kubernetes.io/dockerconfigjson
 sops:
     kms:
-        - arn: arn:aws:kms:us-east-1:950698127059:key/a2033cc0-fa97-41ea-9f33-d03266745335
-          created_at: "2021-10-26T15:10:52Z"
-          enc: AQICAHgBzAXGSUsBPPez012gkh0aDCM5Ggp5aDIfr3StC9gSQAFWPhMjRNDAfl2jgazW8ZJIAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMjtfAOmaTl7xWajTIAgEQgDsIyWm+6dGccwIMOg1ElA3OTIYPAJdj2CsGzhkNNAbB5Hst3h6YiaQ9XMHuyvQKz4aE1+k38B+uXvRAhQ==
+        - arn: arn:aws:kms:us-west-2:950698127059:key/739a21c8-6eaf-4bfe-a5dd-d5eac23d454d
+          created_at: "2022-01-04T17:25:02Z"
+          enc: AQICAHj9cqh7Ztas7PNrFWDZzzJ1ziyqfaJG6rdzOGqA5KFe5gEb6XYUFaIytStWGS5KOH6EAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMlG7qUz+ivorUHG/dAgEQgDudrCmG1t2nfIKaZE08TfafjR4fTGJgi1mdMPE6BUdIOKw/L/CAUFJyysVC6mrho7csR8R5nSxzd5lj4g==
           aws_profile: ""
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2021-10-26T15:10:53Z"
-    mac: ENC[AES256_GCM,data:voW/VHAAAvSmwHoPL+NymU9QhRIK260og7qY7QCD1QlgkF1xQZys01YX2yQtocEgZ7IwBfA1dBP3o6+Xx9jS5FxBrjozyNgZPD9QkdpDy9XI4qXCXvHSLDLSIpLN44sECokBfKGFNRm6E0ai2xszE6RHdYAHBrc1lmkAN3QV+k8=,iv:AwFBP0SwuTzDXjo7IQKwTxTF/5+5Qp7U23MVbrSLt9g=,tag:UHDolh+jprYMXztb/hYyjA==,type:str]
+    lastmodified: "2022-01-04T17:25:03Z"
+    mac: ENC[AES256_GCM,data:9ISuOgvDez/KOkkL0MY2lTltBVD84k2e0T4JN6F0ZsE/KnEH+0LdUHYys26eiN4IT3a7O1Qwq9VAiPJewmSSCai8rj9YW1AAdmjmNv/0vAJvH+Jgom2/hKf6/blLcoPUgCJG0QtY3uexcEu/hv0Psm2UxtvmgD/BvlNLUEJyGsc=,iv:OxnGd6VUWpaMSJrxZ+cZ0+VygwoqhinHKtiWNb6vVuk=,tag:SMKEptEc8rQDtZO1oqyKMw==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
-    version: 3.7.1
+    version: 3.7.0
